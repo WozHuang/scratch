@@ -9,6 +9,8 @@
 
 'use strict';
 
+const __EXPERIMENTAL__ = false;
+
 exports.default = {
   meta: {
     type: 'suggestion',
@@ -26,6 +28,12 @@ exports.default = {
         additionalProperties: false,
         enableDangerousAutofixThisMayCauseInfiniteLoops: false,
         properties: {
+          useStateHooks: {
+            type: 'string',
+          },
+          stableHooks: {
+            type: 'string',
+          },
           additionalHooks: {
             type: 'string',
           },
@@ -44,6 +52,20 @@ exports.default = {
       context.options[0].additionalHooks
         ? new RegExp(context.options[0].additionalHooks)
         : undefined;
+    // Parse the `stableHooks` regex.
+    const stableHooks =
+      context.options &&
+      context.options[0] &&
+      context.options[0].stableHooks
+        ? new RegExp(context.options[0].stableHooks)
+        : undefined;
+    // Parse the `useStateHooks` regex.
+    const useStateHooks =
+      context.options &&
+      context.options[0] &&
+      context.options[0].useStateHooks
+        ? new RegExp(context.options[0].useStateHooks)
+        : undefined;
 
     const enableDangerousAutofixThisMayCauseInfiniteLoops =
       (context.options &&
@@ -53,6 +75,8 @@ exports.default = {
 
     const options = {
       additionalHooks,
+      stableHooks,
+      useStateHooks,
       enableDangerousAutofixThisMayCauseInfiniteLoops,
     };
 
@@ -148,6 +172,10 @@ exports.default = {
 
       const isArray = Array.isArray;
 
+      function isUseState(name) {
+        return name === 'useState' || options.useStateHooks && options.useStateHooks.test(name);
+      }
+
       // Next we'll define a few helpers that helps us
       // tell if some values don't have to be declared as deps.
 
@@ -234,7 +262,7 @@ exports.default = {
           }
           // useEvent() return value is always unstable.
           return true;
-        } else if (name === 'useState' || name === 'useReducer') {
+        } else if (isUseState(name) || name === 'useReducer') {
           // Only consider second value in initializing tuple stable.
           if (
             id.type === 'ArrayPattern' &&
@@ -243,7 +271,7 @@ exports.default = {
           ) {
             // Is second tuple value the same reference we're checking?
             if (id.elements[1] === resolved.identifiers[0]) {
-              if (name === 'useState') {
+              if (isUseState(name)) {
                 const references = resolved.references;
                 let writeCount = 0;
                 for (let i = 0; i < references.length; i++) {
@@ -262,7 +290,7 @@ exports.default = {
               // Setter is stable.
               return true;
             } else if (id.elements[0] === resolved.identifiers[0]) {
-              if (name === 'useState') {
+              if (isUseState(name)) {
                 const references = resolved.references;
                 for (let i = 0; i < references.length; i++) {
                   stateVariables.add(references[i].identifier);
@@ -285,6 +313,8 @@ exports.default = {
               return true;
             }
           }
+        } else if (options.stableHooks && options.stableHooks.test(name)) {
+          return true
         }
         // By default assume it's dynamic.
         return false;

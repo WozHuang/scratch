@@ -3,10 +3,10 @@ const ExhaustiveDeps = require('./ExhaustiveDeps').default;
 
 exports.configs = {
   recommended: {
-    plugins: ['react-hooks'],
+    plugins: ['@woz-scratch/react-hooks'],
     rules: {
-      'react-hooks/rules-of-hooks': 'error',
-      'react-hooks/exhaustive-deps': 'warn',
+      '@woz-scratch/react-hooks/rules-of-hooks': 'error',
+      '@woz-scratch/react-hooks/exhaustive-deps': 'warn',
     },
   },
 };

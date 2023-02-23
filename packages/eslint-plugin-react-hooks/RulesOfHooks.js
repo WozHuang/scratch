@@ -10,6 +10,8 @@
 
 'use strict';
 
+const __EXPERIMENTAL__ = false;
+
 /**
  * Catch all identifiers that begin with "use" followed by an uppercase Latin
  * character to exclude identifiers like "user".

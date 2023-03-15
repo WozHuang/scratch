@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>手写签名照片转换成扫描件</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        padding: 50px;
+        background: #eee;
+      }
+      img {
+        width: 300px;
+        margin: 20px;
+        border: 1px dashed #ccc;
+        box-sizing: border-box;
+        vertical-align: middle;
+      }
+      .before {
+        float: left;
+        clear: both;
+      }
+      .after {
+        float: left;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main"></div>
+
+    <template id="template">
+      <div class="sample">
+        <div class="before">处理前：<img alt="处理前" src="{{before}}" /></div>
+        <div class="after">处理后：<img alt="处理后" src="{{after}}" /></div>
+      </div>
+    </template>
+
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

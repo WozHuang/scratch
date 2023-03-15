@@ -2,6 +2,7 @@
   "private": true,
   "devDependencies": {
     "@types/crypto-js": "^4.1.1",
+    "@types/jquery": "^3.5.16",
     "bonjour-service": "^1.1.0",
     "crypto-js": "^4.1.1",
     "multicast-dns": "^7.2.5",

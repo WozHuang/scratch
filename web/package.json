@@ -1,0 +1,22 @@
+{
+  "scripts": {
+    "vite:dev": "vite --port 12345",
+    "build": "tsc && vite build"
+  },
+  "dependencies": {
+    "@fluentui/react-components": "^9.18.3",
+    "jquery": "^3.6.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@vitejs/plugin-react": "^3.1.0",
+    "autoprefixer": "^10.4.14",
+    "less": "^4.1.3",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.2.7",
+    "vite": "^4.2.1"
+  }
+}

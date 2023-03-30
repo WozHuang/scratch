@@ -120,6 +120,7 @@
 2. [rimraf](https://www.npmjs.com/package/rimraf): `rm -rf`工具
 3. [compare-versions](https://www.npmjs.com/package/compare-versions)
 4. [execa](https://www.npmjs.com/package/execa): 替代直接操作 child_process
+5. [log4js](https://github.com/log4js-node/log4js-node) / [winston](https://github.com/winstonjs/winston): 日志
 
 ## 日志 Log
 

@@ -1,0 +1,6 @@
+packages:
+  - 'web'
+  - 'native'
+  - 'dns'
+  - 'webpack'
+  - 'packages/*'

@@ -11,9 +11,11 @@
     "@types/crypto-js": "^4.1.1",
     "@types/jquery": "^3.5.16",
     "@types/lodash": "^4.14.192",
+    "@types/node": "^18.15.11",
     "inquirer": "^9.1.4",
     "nodemon": "^2.0.21",
     "prettier": "^2.8.6",
+    "ts-node": "^10.9.1",
     "typescript": "^5.0.2"
   },
   "dependencies": {

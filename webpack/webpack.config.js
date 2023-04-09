@@ -1,10 +1,11 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 
 /**
  * @type {WebpackConfig}
  */
 const webpackConfig = {
-  mode: 'development',
+  // mode: 'development',
   entry: './index.js',
   externalsType: 'script',
   externals: {
@@ -14,12 +15,11 @@ const webpackConfig = {
     ]
   },
   // devtool: 'inline-source-map',
-  // output: {
-  //   filename: '[name].js',
-  //   // path: 'dist',
-  //   clean: true
-  // },
-  plugins: [new HtmlWebpackPlugin()]
+  output: {
+    filename: '[name].[hash:4].js',
+    clean: true
+  },
+  plugins: [new HtmlWebpackPlugin(), new WebpackManifestPlugin()]
 };
 
 module.exports = webpackConfig;

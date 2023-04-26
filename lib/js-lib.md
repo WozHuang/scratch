@@ -53,8 +53,13 @@
 3.  [ant-design](https://ant.design/): UI Component
 4.  [ant-design-pro](https://pro.ant.design) / [umi](https://umijs.org/): 管理后台脚手架
 5.  [qiankun](https://qiankun.umijs.org/zh): 微前端
-6.  [react-router](https://reactrouter.com)
-7.  react-intl: i18n
+6.  [react-router](https://reactrouter.com)：路由
+7.  [react-intl](https://formatjs.io/docs/react-intl/): i18n
+8. 拖拽功能实现：
+   - [react-dnd](https://github.com/react-dnd/react-dnd)（没有过渡动画）
+   - [react-beautiful-dnd](https://github.com/atlassian/react-beautiful-dnd)（有过渡动画，但处于弃坑状态）
+   - [dnd-kit](https://github.com/clauderic/dnd-kit)（比较积极维护也有过渡动画，推荐）
+9. [ahooks](https://ahooks.js.org/zh-CN): hooks 工具集
 
 #### [Vue](https://vuejs.org/)
 
@@ -72,8 +77,8 @@
 5. [react-native-config](https://github.com/luggit/react-native-config) / [react-native-device-info](https://github.com/react-native-device-info/react-native-device-info) / react-native-imei
 6. react-native-knex / react-native-sqlite-storage: Use Sqlite in RN with knex
 7. [react-navigation](https://github.com/react-navigation/react-navigation)
-8. rn-app-upgrade
-9. react-native-vector-icons
+8. [rn-app-upgrade](https://www.npmjs.com/package/rn-app-upgrade)
+9. [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons)
 10. [react-native-debugger](https://github.com/jhen0409/react-native-debugger)
 
 #### [小程序 MiniProgram](https://developers.weixin.qq.com/miniprogram/dev/framework/)
@@ -113,6 +118,7 @@
 12. [wangEditor](https://www.wangeditor.com/) / [Quill.js](https://quilljs.com/): 富文本编辑器
 13. [history](https://github.com/remix-run/history): 类似 history api, 支持 browser, hash, memory
 14. [localForage](https://github.com/localForage/localForage): 简化的本地存储
+15. [lozad.js](https://github.com/ApoorvSaxena/lozad.js)：基于 IntersectionObserver 和 MutationObserver 实现的懒加载
 
 ### NodeJS Utils
 

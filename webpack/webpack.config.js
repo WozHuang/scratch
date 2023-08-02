@@ -5,7 +5,7 @@ const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
  * @type {WebpackConfig}
  */
 const webpackConfig = {
-  // mode: 'development',
+  mode: 'development',
   entry: './index.js',
   externalsType: 'script',
   externals: {
@@ -18,6 +18,19 @@ const webpackConfig = {
   output: {
     filename: '[name].[hash:4].js',
     clean: true
+  },
+  module:{
+    rules: [
+      {
+        test: /\.less$/i,
+        use: [
+          // compiles Less to CSS
+          'style-loader',
+          'css-loader',
+          'less-loader',
+        ],
+      }
+    ]
   },
   plugins: [new HtmlWebpackPlugin(), new WebpackManifestPlugin()]
 };

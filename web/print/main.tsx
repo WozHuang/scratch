@@ -1,8 +1,7 @@
-import * as React from 'react';
 import { createRoot } from 'react-dom/client';
-import { useRef } from 'react';
+import React, { useRef } from 'react';
 
-const App = () => {
+let App = () => {
   const iframeRef = useRef<HTMLIFrameElement>(null);
   const printMain = () => window.print();
   const printIframe = () => {
@@ -23,7 +22,7 @@ const App = () => {
         <button onClick={printMain}>print main</button>
         <button onClick={printIframe}>print iframe</button>
       </p>
-      <iframe src="http://127.0.0.1:8080" ref={iframeRef} width={500} height={500} />
+      <iframe src='http://localhost:12345' ref={iframeRef} width={500} height={500} />
     </div>
   );
 };

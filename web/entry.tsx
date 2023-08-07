@@ -6,7 +6,9 @@ const modules: Record<string, () => void> = {
   xterm: () => import('./xterm/main'),
   tailwind: () => import('./tailwind/main'),
   rxjs: () => import('./rxjs/main'),
-  fluent: () => import('./fluent/main')
+  fluent: () => import('./fluent/main'),
+  rc: () => import('./rc/index'),
+  collapse: () => import('./collapse/index'),
 };
 const links = ['jq/'].concat(Object.keys(modules).map((key) => `?${key}`));
 

@@ -16,11 +16,11 @@ export default defineConfig({
   },
   build: {
     outDir: 'dist/web',
+    manifest: true,
     rollupOptions: {
       input: {
-        fluent: resolveHtml('fluent'),
-        tailwind: resolveHtml('tailwind'),
-        jq: resolveHtml('jq')
+        jq: resolveHtml('jq'),
+        server: resolve(__dirname, `./server/index.ts`)
       },
       output: {
         paths: {

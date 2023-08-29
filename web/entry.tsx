@@ -9,6 +9,7 @@ const modules: Record<string, () => void> = {
   fluent: () => import('./fluent/main'),
   rc: () => import('./rc/index'),
   collapse: () => import('./collapse/index'),
+  csrf: () => import('./csrf/main'),
 };
 const links = ['jq/'].concat(Object.keys(modules).map((key) => `?${key}`));
 

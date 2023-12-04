@@ -6,6 +6,7 @@
   "dependencies": {
     "@emotion/css": "^11.11.2",
     "@fluentui/react-components": "^9.18.3",
+    "events": "^3.3.0",
     "jquery": "^3.6.4",
     "rc-collapse": "^3.7.1",
     "rc-menu": "^9.11.1",

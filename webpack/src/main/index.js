@@ -3,6 +3,9 @@ import $ from 'jquery';
 // import(/* webpackChunkName: "E"  */ './other.extract.less'); // 单独的样式
 // import './other.extract.less'; // 单独的样式
 import cssText from '!css-loader!less-loader!./index.less';
+import md from '../../readme.md';
+
+console.log(md);
 
 $(() => {
   console.log('11223344');

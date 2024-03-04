@@ -12,7 +12,7 @@ const webpackConfig = {
   mode: 'production',
   target: ['web', 'es5'],
   entry: {
-    // main: './src/main/index.js',
+    main: './src/main/index.js',
     react: './src/react/index.js',
     react2: './src/react2/index.js'
   },
@@ -111,6 +111,10 @@ const webpackConfig = {
         test: /\.ttf$/i,
         use: ['file-loader']
       },
+      {
+        test: /\.md$/i,
+        type: 'asset/resource'
+      },
     ],
   },
   optimization: {
@@ -168,11 +172,11 @@ const webpackConfig = {
     }
   },
   plugins: [
-    // new HtmlWebpackPlugin({
-    //   chunks: ['main']
-    //   // inject: false,
-    //   // templateContent: `<script src="/main.js"></script>`
-    // }),
+    new HtmlWebpackPlugin({
+      chunks: ['main']
+      // inject: false,
+      // templateContent: `<script src="/main.js"></script>`
+    }),
     new HtmlWebpackPlugin({
       filename: 'react.html',
       chunks: [

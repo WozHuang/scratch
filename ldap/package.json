@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "ldapjs": "3.0.7"
+  }
+}

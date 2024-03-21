@@ -6,4 +6,5 @@ packages:
   - 'nodejs'
   - 'sourceMap'
   - 'snippet'
+  - 'ldap'
   - 'packages/*'

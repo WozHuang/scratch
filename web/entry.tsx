@@ -11,6 +11,7 @@ const modules: Record<string, () => void> = {
   collapse: () => import('./collapse/index'),
   csrf: () => import('./csrf/main'),
   keycloak: () => import('./keycloak/main'),
+  animatecss: () => import('./animatecss/main'),
 };
 const links = ['jq/'].concat(Object.keys(modules).map((key) => `?${key}`));
 

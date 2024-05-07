@@ -12,6 +12,7 @@ const modules: Record<string, () => void> = {
   csrf: () => import('./csrf/main'),
   keycloak: () => import('./keycloak/main'),
   animatecss: () => import('./animatecss/main'),
+  editor: () => import('./editor/main'),
 };
 const links = ['jq/'].concat(Object.keys(modules).map((key) => `?${key}`));
 

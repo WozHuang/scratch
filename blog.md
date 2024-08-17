@@ -5,6 +5,7 @@
 ## 工具
 
 - [lib](lib/root.md): 工具
+- [soft](lib/soft.md): 常用软件
 - [js-lib](lib/js-lib.md): js 库
 
 ## 技巧

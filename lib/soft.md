@@ -1,190 +1,201 @@
 ### 代码编辑器 / IDE
 
-1. VS Code
-2. IDEA
-3. Webstorm
-4. PyCharm
-5. Android Studio
-6. 微信开发者工具
-7. DevEco Studio
+- VS Code
+- IDEA
+- Webstorm
+- PyCharm
+- Android Studio
+- 微信开发者工具
+- DevEco Studio
 
 ### 影音 / 图像
 
-1. QQ 音乐
-2. 腾讯视频
-3. VLC
-4. HoneyView
-5. Axiom.FFmpeg
+- QQ 音乐
+- 腾讯视频
+- VLC
+- HoneyView
+- Axiom.FFmpeg
 
 ### 办公
 
-1. 微信
-2. QQ
-3. 钉钉
-4. Foxmail
-5. 腾讯会议
-6. WeLink
-7. Outlook
-8. 飞书
-9. Coremail / 论客
-10. WPS
-11. LibreOffice
-12. Xmind —— 思维导图
-13. Thunderbird
+- 微信
+- QQ
+- 钉钉
+- Foxmail
+- 腾讯会议
+- WeLink
+- Outlook
+- 飞书
+- Coremail / 论客
+- WPS
+- LibreOffice
+- Xmind —— 思维导图
+- Thunderbird
 
 ### 原型
 
-1. 摹客
-2. Axure
+- 摹客
+- Axure
 
 ### 笔记 / 学习
 
-1. OneNote
-2. Eudic 欧陆词典
-3. FoxitReader
-4. Typora
+- OneNote
+- Eudic 欧陆词典
+- FoxitReader
+- Typora
 
 ### 网盘 / 下载
 
-1. 迅雷
-2. 百度网盘
-3. OneDrive
-4. iCloud
-5. 阿里云盘
-6. 小米云服务
-7. 腾讯微云
+- 迅雷
+- 百度网盘
+- OneDrive
+- iCloud
+- 阿里云盘
+- 小米云服务
+- 腾讯微云
 
 ### 代码管理
 
-1. Git
-2. SourceTree
-3. Tortoise SVN
+- Git
+- SourceTree
+- Tortoise SVN
 
 ### 开发相关
 
-1. asn1js
-2. ASN.1 Editor
-3. ppocr_img
-4. rfbproto
-5. jasmine
-6. Bonjour SDK / Bonjour
+- asn1js
+- ASN.1 Editor
+- ppocr_img
+- rfbproto
+- jasmine
+- Bonjour SDK / Bonjour
 
 #### java
 
-1. jdk
-2. ant
-3. maven
-4. tomcat
-5. gradle
+- jdk
+- ant
+- maven
+- tomcat
+- gradle
 
 #### python
 
-1. python3
-2. python2
+- python3
+- python2
 
 #### Desktop
 
-1. electron fiddle
+- electron fiddle
 
 #### DB
 
-1. mongoDB
-2. Redis
-3. SQLite
+- mongoDB
+- Redis
+- SQLite
 
 #### S3
 
-1. minio
+- minio
 
 ### bin 工具
 
-1. emsdk —— 编译 wasm
-2. aria2
-3. dolt
-4. ffmpeg
-5. mc - minio client
-6. rsync —— 同步工具，但 win 下不太好用
-7. [mkcert](https://github.com/FiloSottile/mkcert) —— 自签名证书生成
-8. [nvm-windows](https://github.com/coreybutler/nvm-windows)
-9. [zstd](https://github.com/facebook/zstd) —— 一种压缩格式的解压工具
+- emsdk —— 编译 wasm
+- aria2
+- dolt
+- ffmpeg
+- mc - minio client
+- rsync —— 同步工具，但 win 下不太好用
+- [mkcert](https://github.com/FiloSottile/mkcert) —— 自签名证书生成
+- [nvm-windows](https://github.com/coreybutler/nvm-windows)
+- [zstd](https://github.com/facebook/zstd) —— 一种压缩格式的解压工具
+- cloc
 
 ### 数据库查看
 
-1. DataGrip
-2. Navicat
-3. Another Desktop Redis Manager
+- DataGrip
+- Navicat
+- Another Desktop Redis Manager
 
 ### 终端 / 远程管理
 
-1. Windows Terminal
-2. XShell / XFtp
-3. WinSCP
-4. Bitvise Ssh Client
+- Windows Terminal
+- XShell / XFtp
+- WinSCP
+- Bitvise Ssh Client
+- zsh / oh-my-zsh
+- tightVNC
+- noVNC
 
 ### 网络
 
-1. Proxifier
-2. V2rayN / V2ray-core
-3. Frp
-4. SwitchyOmega
-5. Whistle
-6. WireShark
-7. Nginx
-8. Httpd
+- Proxifier
+- V2rayN / V2ray-core
+- Frp
+- SwitchyOmega
+- Whistle
+- WireShark
+- Nginx
+- Httpd
 
 ### 浏览器
 
-1. Opera
-2. Chrome
-3. Chrome Dev
-4. Edge
-5. Firefox
-6. 360 极速浏览器 —— 主要用于调试兼容性
+- Opera
+- Chrome
+- Chrome Dev
+- Edge
+- Firefox
+- 360 极速浏览器 —— 主要用于调试兼容性
+
+#### 浏览器扩展
+
+- vue-devtools
+- react-devtools
+- Tampermonkey
+- cross-request
+- adblockpluschrome
 
 ### 娱乐
 
-1. Steam
-2. Epic Games
-3. WeGame
-4. BetterJoy
-5. UU 加速器
+- Steam
+- Epic Games
+- WeGame
+- BetterJoy
+- UU 加速器
 
 ### 其他
 
-1. Vmware 虚拟机
-2. WSL1 / WSL2
-3. VirtualBox
-4. Postman
-5. PowerToys
-6. SwitchHosts
-7. OSS-Browser
-8. OBS Studio
-9. 哔哩哔哩直播姬
-10. licecap
-11. ScreenToGif
-12. 7zip
-13. CrystalDiskInfo
-14. OpenArk64
-15. tightvnc
-16. autoclicker
-17. XMouse
-18. rn-debugger-windows-x64
-19. rufus-3.9
-20. cudnn
-21. ContextMenuManager
-22. LDAPSoft Ldap Browser
-23. 向日葵远程控制
-24. Bing 壁纸
-25. AVerMedia
-26. 楼月鼠标连点器
-27. renpy-sdk
+- Vmware 虚拟机
+- WSL1 / WSL2
+- VirtualBox
+- Postman
+- PowerToys
+- SwitchHosts
+- OSS-Browser
+- OBS Studio
+- 哔哩哔哩直播姬
+- licecap
+- ScreenToGif
+- 7zip
+- CrystalDiskInfo
+- OpenArk64
+- autoclicker
+- XMouse
+- rn-debugger-windows-x64
+- rufus-3.9
+- cudnn
+- ContextMenuManager
+- LDAPSoft Ldap Browser
+- 向日葵远程控制
+- Bing 壁纸
+- AVerMedia
+- 楼月鼠标连点器
+- renpy-sdk
 
 #### Font
 
-1. opposans
-2. 斗鱼追光体
-3. CascadiaCode
+- opposans
+- 斗鱼追光体
+- CascadiaCode
 
 #### Design
 
-1. WeUI
+- WeUI

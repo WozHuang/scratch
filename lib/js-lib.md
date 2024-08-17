@@ -55,11 +55,11 @@
 5.  [qiankun](https://qiankun.umijs.org/zh): 微前端
 6.  [react-router](https://reactrouter.com)：路由
 7.  [react-intl](https://formatjs.io/docs/react-intl/): i18n
-8. 拖拽功能实现：
-   - [react-dnd](https://github.com/react-dnd/react-dnd)（没有过渡动画）
-   - [react-beautiful-dnd](https://github.com/atlassian/react-beautiful-dnd)（有过渡动画，但处于弃坑状态）
-   - [dnd-kit](https://github.com/clauderic/dnd-kit)（比较积极维护也有过渡动画，推荐）
-9. [ahooks](https://ahooks.js.org/zh-CN): hooks 工具集
+8.  拖拽功能实现：
+    - [react-dnd](https://github.com/react-dnd/react-dnd)（没有过渡动画）
+    - [react-beautiful-dnd](https://github.com/atlassian/react-beautiful-dnd)（有过渡动画，但处于弃坑状态）
+    - [dnd-kit](https://github.com/clauderic/dnd-kit)（比较积极维护也有过渡动画，推荐）
+9.  [ahooks](https://ahooks.js.org/zh-CN): hooks 工具集
 
 #### [Vue](https://vuejs.org/)
 
@@ -131,6 +131,7 @@
 ## 日志 Log
 
 1. [Sentry](https://sentry.io)
+2. [winstonjs](https://github.com/winstonjs/winston)
 
 ## 测试 Testing
 
@@ -170,6 +171,7 @@
 2. [rollup.js](https://rollupjs.org)
 3. [vite](https://vitejs.dev/)
 4. [gulp.js](https://gulpjs.com/)
+5. [astro](https://astro.build/)
 
 ### 代码混淆
 

@@ -32,6 +32,7 @@
     - [Compiler](#compiler)
     - [构建工具 Bundler](#构建工具-bundler)
     - [代码混淆](#代码混淆)
+    - [远程开发](#远程开发)
 
 ## Web
 
@@ -176,3 +177,7 @@
 ### 代码混淆
 
 1. [JavaScript Obfuscator](https://obfuscator.io/)
+
+### 远程开发
+
+1. [code-server](https://github.com/coder/code-server) —— 运行在浏览器里的 vscode

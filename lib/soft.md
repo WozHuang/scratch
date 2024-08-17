@@ -28,8 +28,9 @@
 8. 飞书
 9. Coremail / 论客
 10. WPS
-11. Xmind —— 思维导图
-12. Thunderbird
+11. LibreOffice
+12. Xmind —— 思维导图
+13. Thunderbird
 
 ### 原型
 
@@ -66,8 +67,7 @@
 3. ppocr_img
 4. rfbproto
 5. jasmine
-6. python
-7. Bonjour SDK / Bonjour
+6. Bonjour SDK / Bonjour
 
 #### java
 
@@ -75,10 +75,12 @@
 2. ant
 3. maven
 4. tomcat
+5. gradle
 
 #### python
 
-1. python
+1. python3
+2. python2
 
 #### Desktop
 
@@ -96,14 +98,15 @@
 
 ### bin 工具
 
-1. emsdk
+1. emsdk —— 编译 wasm
 2. aria2
 3. dolt
 4. ffmpeg
 5. mc - minio client
-6. rsync
-7. mkcert
-8. nvm
+6. rsync —— 同步工具，但 win 下不太好用
+7. [mkcert](https://github.com/FiloSottile/mkcert) —— 自签名证书生成
+8. [nvm-windows](https://github.com/coreybutler/nvm-windows)
+9. [zstd](https://github.com/facebook/zstd) —— 一种压缩格式的解压工具
 
 ### 数据库查看
 
@@ -121,7 +124,7 @@
 ### 网络
 
 1. Proxifier
-2. V2rayN
+2. V2rayN / V2ray-core
 3. Frp
 4. SwitchyOmega
 5. Whistle
@@ -174,6 +177,7 @@
 24. Bing 壁纸
 25. AVerMedia
 26. 楼月鼠标连点器
+27. renpy-sdk
 
 #### Font
 

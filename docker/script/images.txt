@@ -1,0 +1,1 @@
+registry-url.cn/repo-category/repo-name:1.0.0

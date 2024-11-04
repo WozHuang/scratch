@@ -139,6 +139,7 @@
 - [history](https://github.com/remix-run/history): 类似 history api, 支持 browser, hash, memory
 - [localForage](https://github.com/localForage/localForage): 简化的本地存储
 - [lozad.js](https://github.com/ApoorvSaxena/lozad.js)：基于 IntersectionObserver 和 MutationObserver 实现的懒加载
+- [emoji-mart](https://github.com/missive/emoji-mart): Web 表情选择器
 - autolinker
 
 ### NodeJS Utils

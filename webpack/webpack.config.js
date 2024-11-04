@@ -1,6 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const NodePolyfillPlugin = require('node-polyfill-webpack-plugin');
 
 /**
  * @type {WebpackConfig}
@@ -14,6 +15,7 @@ const webpackConfig = {
   entry: {
     main: './src/main/index.js',
     react: './src/react/index.js',
+    knex: './src/knex/index.js',
     react2: './src/react2/index.js'
   },
   // externalsType: 'script',
@@ -79,7 +81,7 @@ const webpackConfig = {
               'css-loader',
               // 'less-loader'
               {
-                loader: "less-loader",
+                loader: 'less-loader',
                 options: {
                   javascriptEnabled: true
                 }
@@ -92,7 +94,7 @@ const webpackConfig = {
               'css-loader',
               // 'less-loader'
               {
-                loader: "less-loader",
+                loader: 'less-loader',
                 options: {
                   lessOptions: {
                     javascriptEnabled: true
@@ -114,8 +116,8 @@ const webpackConfig = {
       {
         test: /\.md$/i,
         type: 'asset/resource'
-      },
-    ],
+      }
+    ]
   },
   optimization: {
     minimize: false,
@@ -180,17 +182,24 @@ const webpackConfig = {
     new HtmlWebpackPlugin({
       filename: 'react.html',
       chunks: [
-        'react',
+        'react'
         // 'react2'
       ]
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'knex.html',
+      chunks: ['knex']
     }),
     new WebpackManifestPlugin(),
     new MiniCssExtractPlugin({
       runtime: false
+    }),
+    new NodePolyfillPlugin({
+      additionalAliases: ['process']
     })
   ],
   devServer: {
-    port: 8900,
+    port: 8900
     // devMiddleware: {
     //   writeToDisk: true
     // }

@@ -129,12 +129,13 @@
 
 - Proxifier
 - V2rayN / V2ray-core
-- Frp
+- Frp：网络转发
 - SwitchyOmega
 - Whistle
-- WireShark
+- WireShark: 抓包工具
 - Nginx
 - Httpd
+- [PortProxyGUI](https://github.com/zmjack/PortProxyGUI): windows 自带端口转发 GUI
 
 ### 浏览器
 

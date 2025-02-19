@@ -149,6 +149,7 @@
 - [compare-versions](https://www.npmjs.com/package/compare-versions)
 - [execa](https://www.npmjs.com/package/execa): 替代直接操作 child_process
 - [log4js](https://github.com/log4js-node/log4js-node) / [winston](https://github.com/winstonjs/winston): 日志
+- [ora](https://www.npmjs.com/package/ora) / [cli-progress](https://www.npmjs.com/package/cli-progress): console 进度条
 
 ## 日志 Log
 

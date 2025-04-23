@@ -1,0 +1,29 @@
+安装的一些全局依赖
+
+1. @ant-design/pro-cli
+2. @nestjs/cli
+3. @tarojs/cli
+4. anywhere
+5. bower
+6. cloc
+7. cnpm
+8. cordova
+9. create-electron-app
+10. create-react-app
+11. create-strapi-app
+12. create-strapi-starter
+13. glob
+14. grunt-cli
+15. json-server
+16. lerna
+17. nodemon
+18. npkill
+19. pm2
+20. pnpm
+21. react-native
+22. rimraf
+23. tiged
+24. tsx
+25. vercel
+26. whistle
+27. yarn

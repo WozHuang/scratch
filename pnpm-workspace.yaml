@@ -1,4 +1,5 @@
 packages:
+  - 'base'
   - 'web'
   - 'native'
   - 'dns'
@@ -7,4 +8,5 @@ packages:
   - 'sourceMap'
   - 'snippet'
   - 'ldap'
+  - 'jest'
   - 'packages/*'

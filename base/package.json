@@ -1,0 +1,17 @@
+{
+  "name": "@woz-scratch/base",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "tsc:watch": "tsc --watch",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "log4js": "^6.9.1"
+  }
+}

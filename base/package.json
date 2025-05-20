@@ -1,6 +1,6 @@
 {
   "name": "@woz-scratch/base",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
@@ -9,9 +9,11 @@
   },
   "scripts": {
     "tsc:watch": "tsc --watch",
-    "build": "tsc"
+    "build": "rimraf dist && tsc",
+    "esbuild": "node esbuild.js"
   },
   "dependencies": {
+    "axios": "^1.9.0",
     "log4js": "^6.9.1"
   }
 }

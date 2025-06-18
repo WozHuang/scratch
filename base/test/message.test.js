@@ -1,4 +1,4 @@
-import test, { assert, before, describe } from 'node:test';
+import test, { before, describe } from 'node:test';
 import { WeChatBot } from '../dist/index.js';
 
 const key = '';

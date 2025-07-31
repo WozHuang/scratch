@@ -1,0 +1,6 @@
+{
+  "scripts": {
+    "clone-rrule": "git clone --depth=1 https://github.com/jkbrzt/rrule.git temp-rrule-lib",
+    "start": "tsx index.ts"
+  }
+}

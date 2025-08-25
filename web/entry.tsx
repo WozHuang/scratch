@@ -14,6 +14,7 @@ const modules: Record<string, () => void> = {
   animatecss: () => import('./animatecss/main'),
   editor: () => import('./editor/main'),
   calendar: () => import('./calendar/main'),
+  ical: () => import('./ical/main'),
 };
 const links = ['jq/'].concat(Object.keys(modules).map((key) => `?${key}`));
 

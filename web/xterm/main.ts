@@ -1,5 +1,5 @@
-import { Terminal } from 'xterm';
-import 'xterm/css/xterm.css';
+import { Terminal } from '@xterm/xterm';
+import '@xterm/xterm/css/xterm.css';
 
 const root = document.getElementById('root') as HTMLElement;
 const term = new Terminal();

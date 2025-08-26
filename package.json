@@ -5,7 +5,13 @@
       "ignoreMissing": [
         "scheduler"
       ]
-    }
+    },
+    "ignoredBuiltDependencies": [
+      "esbuild"
+    ],
+    "onlyBuiltDependencies": [
+      "node-pty"
+    ]
   },
   "devDependencies": {
     "@types/crypto-js": "^4.2.2",

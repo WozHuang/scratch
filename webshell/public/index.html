@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<!-- public/index.html -->
+<div id="terminal"></div>
+<script src="https://cdn.jsdelivr.net/npm/xterm/lib/xterm.min.js"></script>
+<script>
+  const term = new Terminal();
+  term.open(document.getElementById('terminal'));
+  const socket = new WebSocket(`ws://${location.host}`);
+  socket.onmessage = e => term.write(e.data);
+  term.onData(data => socket.send(data));
+</script>
+</body>
+</html>

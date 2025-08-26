@@ -1,3 +1,5 @@
+allowedDeprecatedVersions:
+  ldapjs: "3.0.7"
 packages:
   - 'base'
   - 'web'
@@ -9,4 +11,5 @@ packages:
   - 'snippet'
   - 'ldap'
   - 'jest'
+  - 'webshell'
   - 'packages/*'

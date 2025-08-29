@@ -15,6 +15,7 @@ const modules: Record<string, () => void> = {
   editor: () => import('./editor/main'),
   calendar: () => import('./calendar/main'),
   ical: () => import('./ical/main'),
+  kysely: () => import('./kysely/main'),
 };
 const links = ['jq/'].concat(Object.keys(modules).map((key) => `?${key}`));
 

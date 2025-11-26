@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>tRPC Web Demo</title>
+</head>
+<body>
+<h1 id="hello"></h1>
+<p id="sum"></p>
+
+<script type="module">
+  import { createTRPCProxyClient, httpBatchLink } from 'https://cdn.jsdelivr.net/npm/@trpc/client@11.7.1/+esm'
+
+  // 注意：这里没有类型推导（因为浏览器不跑 TS），
+  // 如果你用 Vite/TS 构建，可以 import AppRouter 类型。
+  const client = createTRPCProxyClient({
+    links: [
+      httpBatchLink({
+        url: "http://localhost:3000/trpc",
+      }),
+    ],
+  });
+
+  async function main() {
+    const helloMsg = await client.hello.query("ZiHao");
+    document.getElementById("hello").textContent = helloMsg;
+
+    const result = await client.add.mutate({ a: 3, b: 5 });
+    document.getElementById("sum").textContent = `3 + 5 = ${result}`;
+  }
+
+  main();
+</script>
+</body>
+</html>

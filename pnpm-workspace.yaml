@@ -12,4 +12,5 @@ packages:
   - 'ldap'
   - 'jest'
   - 'webshell'
+  - 'trpc'
   - 'packages/*'

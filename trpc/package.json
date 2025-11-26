@@ -1,0 +1,28 @@
+{
+  "name": "trpc",
+  "main": "index.js",
+  "scripts": {
+    "server": "node src/server.js",
+    "build": "pkg ."
+  },
+  "bin": "src/server.js",
+  "pkg": {
+    "scripts": ["src/**/*.js"],
+    "assets": ["public/**/*"],
+    "targets": ["node18-win-x64"],
+    "outputPath": "dist"
+  },
+  "private": true,
+  "dependencies": {
+    "@trpc/client": "^11.7.1",
+    "@trpc/server": "^11.7.1",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "pkg": "^5.8.1"
+  }
+}

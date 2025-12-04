@@ -1,23 +1,12 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 
-const modules: Record<string, () => void> = {
-  print: () => import('./print/main'),
-  xterm: () => import('./xterm/main'),
-  tailwind: () => import('./tailwind/main'),
-  rxjs: () => import('./rxjs/main'),
-  fluent: () => import('./fluent/main'),
-  rc: () => import('./rc/index'),
-  collapse: () => import('./collapse/index'),
-  csrf: () => import('./csrf/main'),
-  keycloak: () => import('./keycloak/main'),
-  animatecss: () => import('./animatecss/main'),
-  editor: () => import('./editor/main'),
-  calendar: () => import('./calendar/main'),
-  ical: () => import('./ical/main'),
-  kysely: () => import('./kysely/main'),
-};
-const links = ['jq/'].concat(Object.keys(modules).map((key) => `?${key}`));
+const htmls = import.meta.glob(['./*/*.html']);
+const modules = import.meta.glob(['./*/main.{ts,tsx,js,jsx}', './*/index.{ts,tsx,js,jsx}']);
+
+const links: { title: string; url: string }[] = ([] as { title: string; url: string }[])
+  .concat(Object.keys(htmls).map((key) => ({ title: key, url: key })))
+  .concat(Object.keys(modules).map((key) => ({ title: `${key}`, url: `?${key}` })));
 
 const search = location.search.slice(1);
 if (search in modules) {
@@ -27,8 +16,8 @@ if (search in modules) {
   createRoot(root).render(
     <div>
       {links.map((link) => (
-        <p key={link}>
-          <a href={link}>{link}</a>
+        <p key={link.url}>
+          <a href={link.url}>{link.title}</a>
         </p>
       ))}
     </div>

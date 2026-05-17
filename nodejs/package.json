@@ -4,7 +4,11 @@
     "@koa/router": "^14.0.0",
     "csv": "^6.2.10",
     "koa": "^3.0.1",
-    "node-notifier": "^10.0.1"
+    "node-notifier": "^10.0.1",
+    "weixin-ilink": "^0.1.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   },
   "devDependencies": {
     "@types/koa": "^3.0.0",

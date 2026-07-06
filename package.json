@@ -1,18 +1,5 @@
 {
   "private": true,
-  "pnpm": {
-    "peerDependencyRules": {
-      "ignoreMissing": [
-        "scheduler"
-      ]
-    },
-    "ignoredBuiltDependencies": [
-      "esbuild"
-    ],
-    "onlyBuiltDependencies": [
-      "node-pty"
-    ]
-  },
   "devDependencies": {
     "@types/crypto-js": "^4.2.2",
     "@types/fs-extra": "^11.0.4",

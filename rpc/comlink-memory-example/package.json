@@ -1,0 +1,16 @@
+{
+  "name": "comlink-memory-example",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node dist/client.js",
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "dependencies": {
+    "comlink": "^4.4.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  }
+}

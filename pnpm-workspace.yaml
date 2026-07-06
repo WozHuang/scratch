@@ -1,3 +1,10 @@
+peerDependencyRules:
+  ignoreMissing:
+    - scheduler
+ignoredBuiltDependencies:
+  - esbuild
+onlyBuiltDependencies:
+  - node-pty
 allowedDeprecatedVersions:
   ldapjs: "3.0.7"
 packages:
@@ -12,5 +19,12 @@ packages:
   - 'ldap'
   - 'jest'
   - 'webshell'
-  - 'trpc'
+  - 'rpc/*'
   - 'packages/*'
+allowBuilds:
+  core-js: true
+  es5-ext: true
+  esbuild: true
+  ffi-napi: true
+  node-pty: false
+  ref-napi: true

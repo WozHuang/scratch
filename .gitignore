@@ -13,6 +13,7 @@ temp*
 tmp
 *.exe
 coverage
+.DS_Store
 
 # 不加版本控制
 package-lock.json

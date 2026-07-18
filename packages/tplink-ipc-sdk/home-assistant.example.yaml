@@ -1,0 +1,16 @@
+# secrets.yaml:
+# tplink_ipc_authorization: "Bearer replace-with-the-same-token-as-TPLINK_IPC_API_TOKEN"
+
+switch:
+  - platform: rest
+    name: '客厅摄像头隐私模式'
+    resource: 'http://tplink-ipc:3000/api/cameras/living_room/lens-mask'
+    method: post
+    body_on: '{"enabled":true}'
+    body_off: '{"enabled":false}'
+    is_on_template: '{{ value_json.enabled }}'
+    headers:
+      Authorization: !secret tplink_ipc_authorization
+      Content-Type: 'application/json'
+    timeout: 15
+    scan_interval: 30

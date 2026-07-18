@@ -1,6 +1,6 @@
 import { config } from 'dotenv'
 import { describe, it, expect, beforeAll } from 'vitest'
-import { TPLinkIPCApiClient } from '../src/api.js'
+import { TPLinkIPCApiClient, TPIPCApiError } from '../src/api.js'
 
 config()
 
@@ -59,5 +59,19 @@ describe('TPLinkIPCApiClient - 构造函数校验', () => {
 
   it('正常构造不应抛出异常', () => {
     expect(() => new TPLinkIPCApiClient('192.168.1.1', 'admin', 'pass')).not.toThrow()
+  })
+})
+
+describe('TPLinkIPCApiClient - API 错误', () => {
+  it('设备返回非零 error_code 时抛出 TPIPCApiError', async () => {
+    const client = new TPLinkIPCApiClient('192.168.1.1', 'admin', 'pass')
+    client.stok = 'test-stok'
+    client.http.post = async () => ({ data: { error_code: -1 } })
+
+    await expect(client.request({ method: 'get' })).rejects.toMatchObject({
+      name: 'TPIPCApiError',
+      errorCode: -1
+    })
+    await expect(client.request({ method: 'get' })).rejects.toBeInstanceOf(TPIPCApiError)
   })
 })

@@ -127,7 +127,7 @@ export class TPLinkIPCApiClient {
       }
 
       if (errorCode !== 0) {
-        console.warn(`API returned error: ${JSON.stringify(data)}`)
+        throw new TPIPCApiError(`Device returned API error ${errorCode}.`, errorCode, data)
       }
 
       return data

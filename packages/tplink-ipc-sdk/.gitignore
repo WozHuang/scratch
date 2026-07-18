@@ -1,3 +1,4 @@
 node_modules/
 .env
+cameras.json
 package-lock.json

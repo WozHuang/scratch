@@ -1,0 +1,11 @@
+node_modules
+tests
+.env
+*.local
+cameras.json
+coverage
+.git
+.gitignore
+README.md
+docker-compose*.yml
+home-assistant*.yaml

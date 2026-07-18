@@ -1,0 +1,27 @@
+services:
+  tplink-ipc:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: tplink-ipc-service:local
+    restart: unless-stopped
+    environment:
+      PORT: '3000'
+      CAMERA_CONFIG_FILE: /app/config/cameras.json
+      API_TOKEN: ${TPLINK_IPC_API_TOKEN}
+    volumes:
+      - ./cameras.json:/app/config/cameras.json:ro
+    expose:
+      - '3000'
+    networks:
+      - homeassistant
+    read_only: true
+    tmpfs:
+      - /tmp
+    security_opt:
+      - no-new-privileges:true
+
+networks:
+  homeassistant:
+    external: true
+    name: homeassistant

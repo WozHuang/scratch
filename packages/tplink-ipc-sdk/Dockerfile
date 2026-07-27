@@ -4,6 +4,7 @@ ENV NODE_ENV=production
 WORKDIR /app
 
 COPY package.json ./
+COPY .npmrc ./
 RUN npm install --omit=dev --ignore-scripts --no-package-lock \
   && npm cache clean --force
 

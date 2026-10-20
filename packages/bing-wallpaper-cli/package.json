@@ -1,0 +1,65 @@
+{
+  "name": "@woz-scratch/bing-wallpaper-cli",
+  "version": "0.1.0",
+  "description": "Bing 每日壁纸 CLI，支持 Windows 和 macOS 原生每日任务",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WozHuang/scratch.git",
+    "directory": "packages/bing-wallpaper-cli"
+  },
+  "homepage": "https://github.com/WozHuang/scratch/tree/dev/packages/bing-wallpaper-cli",
+  "keywords": [
+    "bing",
+    "wallpaper",
+    "cli",
+    "windows",
+    "macos",
+    "launchd"
+  ],
+  "type": "module",
+  "bin": {
+    "bing-wallpaper": "dist/cli.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "DEPENDENCIES.md"
+  ],
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "format:check": "prettier --check src tests *.json *.md",
+    "prepack": "npm run build"
+  },
+  "dependencies": {
+    "commander": "^15.0.0",
+    "env-paths": "^4.0.0",
+    "image-size": "^2.0.4",
+    "wallpaper": "^7.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "prettier": "^3.0.0",
+    "typescript": "^5.8.3",
+    "vitest": "^5.0.5"
+  }
+}

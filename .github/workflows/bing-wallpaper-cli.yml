@@ -1,0 +1,39 @@
+name: Bing wallpaper CLI
+
+on:
+  push:
+    paths:
+      - 'packages/bing-wallpaper-cli/**'
+      - '.github/workflows/bing-wallpaper-cli.yml'
+  pull_request:
+    paths:
+      - 'packages/bing-wallpaper-cli/**'
+      - '.github/workflows/bing-wallpaper-cli.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, macos-latest]
+        node: [22, 24]
+    runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        working-directory: packages/bing-wallpaper-cli
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - run: npm install
+      - run: npm run typecheck
+      - run: npm run build
+      - run: npm test
+      - run: npm run format:check
+      - run: npm pack
+      - run: node dist/cli.js --help
